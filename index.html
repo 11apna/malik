@@ -1,453 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malik Mumbai - Join Telegram</title>
-    <meta name="description" content="Join the original Malik Mumbai Telegram channel. Free joining ends soon.">
-    <style>
-        /* Base Reset & Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            line-height: 1.5;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-        }
-        
-        /* Top Text */
-        .top-text {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #f8f8f8;
-            margin-bottom: 5px;
-            text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-            font-family: 'Segoe UI', sans-serif;
-        }
-        
-        /* DP Image */
-        .dp-container {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid transparent;
-            background: linear-gradient(45deg, #8a2387, #e94057, #f27121);
-            padding: 4px;
-            margin-bottom: 5px;
-            position: relative;
-            animation: borderGlow 3s ease-in-out infinite;
-        }
-        
-        @keyframes borderGlow {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-        
-        .dp-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 50%;
-        }
-        
-        /* Name */
-        .name {
-            font-size: 38px;
-            font-weight: 800;
-            color: #ffffff;
-            text-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-            letter-spacing: 1px;
-            margin-top: 5px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        
-        /* Timer Section */
-        .timer-section {
-            margin-top: 20px;
-            width: 100%;
-        }
-        
-        .timer-text {
-            font-size: 18px;
-            font-weight: 500;
-            color: #aaa;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .timer-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        
-        .timer-display {
-            font-size: 80px;
-            font-weight: 900;
-            color: #fff;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-            letter-spacing: 3px;
-            font-family: 'Courier New', monospace;
-            background: linear-gradient(to right, #8a2387, #e94057, #f27121);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: timerPulse 1s ease-in-out infinite;
-        }
-        
-        @keyframes timerPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        .timer-label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #777;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        /* Button Container */
-        .button-container {
-            width: 100%;
-            max-width: 320px;
-            margin-top: 10px;
-        }
-        
-        /* Premium Button */
-        .premium-btn {
-            position: relative;
-            border: none;
-            background: transparent;
-            padding: 0;
-            outline: none;
-            cursor: pointer;
-            font-family: 'Courier New', monospace;
-            font-weight: 300;
-            text-transform: uppercase;
-            font-size: 16px;
-            width: 100%;
-        }
-        
-        .btn-shadow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 12px;
-            transform: translateY(4px);
-            transition: all 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-        }
-        
-        .premium-btn:hover .btn-shadow {
-            transform: translateY(6px);
-            transition-duration: 250ms;
-        }
-        
-        .premium-btn:active .btn-shadow {
-            transform: translateY(2px);
-        }
-        
-        .btn-base {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            background: linear-gradient(to left, #0a0e17, #1a2238, #0a0e17);
-        }
-        
-        .btn-content {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px 24px;
-            color: white;
-            border-radius: 12px;
-            transform: translateY(-4px);
-            background: linear-gradient(to right, #f27121, #e94057, #8a2387);
-            gap: 12px;
-            transition: all 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            filter: brightness(1);
-        }
-        
-        .premium-btn:hover .btn-content {
-            transform: translateY(-6px);
-            transition-duration: 250ms;
-            filter: brightness(1.1);
-        }
-        
-        .premium-btn:active .btn-content {
-            transform: translateY(-2px);
-        }
-        
-        .btn-text {
-            user-select: none;
-        }
-        
-        .btn-icon {
-            width: 20px;
-            height: 20px;
-            margin-left: 8px;
-            transition: transform 250ms;
-        }
-        
-        .premium-btn:hover .btn-icon {
-            transform: translateX(4px);
-        }
-        
-        /* CTA Text */
-        .cta-text {
-            font-size: 18px;
-            font-weight: 400;
-            color: #aaa;
-            margin-top: 10px;
-            letter-spacing: 1px;
-            text-transform: lowercase;
-        }
-        
-        .cta-text::first-letter {
-            text-transform: uppercase;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 500px) {
-            .top-text {
-                font-size: 28px;
-            }
-            
-            .dp-container {
-                width: 140px;
-                height: 140px;
-            }
-            
-            .name {
-                font-size: 32px;
-            }
-            
-            .timer-display {
-                font-size: 70px;
-            }
-            
-            .btn-content {
-                font-size: 16px;
-                padding: 16px 20px;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            .top-text {
-                font-size: 24px;
-            }
-            
-            .dp-container {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .name {
-                font-size: 28px;
-            }
-            
-            .timer-display {
-                font-size: 60px;
-            }
-            
-            .btn-content {
-                font-size: 15px;
-                padding: 14px 18px;
-            }
-        }
-        
-        /* Loading optimization */
-        .dp-container {
-            background-color: #1a1a1a;
-        }
-        
-        /* Countdown animation */
-        @keyframes countdownFlash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        .timer-flash {
-            animation: countdownFlash 1s infinite;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Mumbai – Official Telegram</title>
+
+<meta name="description" content="Join the official Malik Mumbai Telegram channel. Free access for limited time only.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+}
+
+/* Top */
+.top-text{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:16px;
+}
+
+/* DP */
+.dp{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #1da1f2;
+    margin-bottom:12px;
+}
+
+/* Name */
+.name{
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+/* Info */
+.info{
+    font-size:15px;
+    color:#ccc;
+    margin-bottom:8px;
+}
+
+/* Timer */
+.timer{
+    margin:14px 0 20px;
+}
+
+.timer-number{
+    font-size:58px;
+    font-weight:900;
+}
+
+.timer-label{
+    font-size:13px;
+    color:#aaa;
+    letter-spacing:1px;
+}
+
+/* Button */
+.join-btn{
+    width:100%;
+    background:#1da1f2;
+    color:#fff;
+    border:none;
+    padding:16px;
+    font-size:17px;
+    font-weight:800;
+    border-radius:40px;
+    cursor:pointer;
+    transition:all .25s ease;
+    box-shadow:0 0 0 rgba(29,161,242,0.6);
+}
+
+.join-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(29,161,242,0.8);
+}
+
+.join-btn:active{
+    transform:scale(.98);
+}
+
+/* CTA */
+.cta{
+    margin-top:14px;
+    font-size:14px;
+    color:#bbb;
+}
+
+/* Advertiser */
+.advertiser{
+    margin-top:22px;
+    font-size:11px;
+    color:#666;
+    letter-spacing:.5px;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Top Text -->
-        <div class="top-text">🙏🏻GOVIND🙏🏻</div>
-        
-        <!-- DP Image -->
-        <div class="dp-container">
-            <img 
-                src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg" 
-                alt="Malik Mumbai" 
-                class="dp-image"
-                loading="eager"
-                decoding="async"
-            >
-        </div>
-        
-        <!-- Name -->
-        <div class="name">Malik Mumbai</div>
-        
-        <!-- Timer Section -->
-        <div class="timer-section">
-            <div class="timer-text">FREE JOINING END IN...</div>
-            <div class="timer-container">
-                <div class="timer-display" id="timer">25</div>
-                <div class="timer-label">Seconds</div>
-            </div>
-        </div>
-        
-        <!-- Premium Button -->
-        <div class="button-container">
-            <button class="premium-btn" id="joinBtn">
-                <span class="btn-shadow"></span>
-                <span class="btn-base"></span>
-                <div class="btn-content">
-                    <span class="btn-text">JOIN NOW FOR FREE</span>
-                    <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path clip-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fill-rule="evenodd"></path>
-                    </svg>
-                </div>
-            </button>
-        </div>
-        
-        <!-- CTA Text -->
-        <div class="cta-text">join the original malik mumbai</div>
+
+<div class="container">
+
+    <div class="top-text">🙏🏻 GOVIND 🙏🏻</div>
+
+    <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg" alt="Malik Mumbai">
+
+    <div class="name">Malik Mumbai</div>
+
+    <div class="info">FREE JOINING ENDING SOON</div>
+
+    <div class="timer">
+        <div class="timer-number" id="sec">20</div>
+        <div class="timer-label">SECONDS LEFT</div>
     </div>
 
-    <script>
-        // Timer countdown from 25 seconds
-        let timeLeft = 25;
-        const timerElement = document.getElementById('timer');
-        const joinBtn = document.getElementById('joinBtn');
-        const telegramLink = "https://t.me/+-OYfELVJn8piMzY9";
-        let countdownComplete = false;
-        
-        function updateTimer() {
-            // Update display with leading zero
-            timerElement.textContent = timeLeft.toString().padStart(2, '0');
-            
-            // Add flash animation when time is low
-            if (timeLeft <= 10) {
-                timerElement.classList.add('timer-flash');
-            }
-            
-            if (timeLeft <= 0 && !countdownComplete) {
-                countdownComplete = true;
-                clearInterval(timerInterval);
-                timerElement.textContent = '00';
-                timerElement.classList.remove('timer-flash');
-                
-                // Change button text when timer ends
-                const btnText = document.querySelector('.btn-text');
-                if (btnText) {
-                    btnText.textContent = 'REDIRECTING...';
-                }
-                
-                // Redirect to Telegram after 1 second
-                setTimeout(() => {
-                    window.location.href = telegramLink;
-                }, 1000);
-            } else {
-                timeLeft--;
-            }
-        }
-        
-        // Update timer every second
-        const timerInterval = setInterval(updateTimer, 1000);
-        
-        // Button click handler
-        joinBtn.addEventListener('click', function() {
-            // Add click animation
-            this.style.transform = 'scale(0.98)';
-            
-            // Change button text immediately
-            const btnText = document.querySelector('.btn-text');
-            if (btnText) {
-                btnText.textContent = 'REDIRECTING...';
-            }
-            
-            // Add a slight delay for visual feedback
-            setTimeout(() => {
-                window.location.href = telegramLink;
-            }, 300);
-            
-            // Reset button animation
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 300);
-        });
-        
-        // Preload the DP image for better performance
-        window.addEventListener('load', function() {
-            const img = new Image();
-            img.src = 'https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg';
-            
-            // Auto-redirect when timer hits 0
-            setTimeout(() => {
-                if (!countdownComplete) {
-                    clearInterval(timerInterval);
-                    window.location.href = telegramLink;
-                }
-            }, 26000); // 26 seconds to account for initial delay
-        });
-        
-        // Add hover sound effect simulation (visual only)
-        joinBtn.addEventListener('mouseenter', function() {
-            // Visual feedback only - no sound for speed
-            const btnContent = this.querySelector('.btn-content');
-            btnContent.style.transitionDuration = '150ms';
-        });
-        
-        joinBtn.addEventListener('mouseleave', function() {
-            const btnContent = this.querySelector('.btn-content');
-            btnContent.style.transitionDuration = '250ms';
-        });
-    </script>
+    <button class="join-btn" id="joinBtn">
+        JOIN OFFICIAL TELEGRAM (FREE)
+    </button>
+
+    <div class="cta">Join the original Malik Mumbai channel</div>
+
+    <div class="advertiser">
+        Advertiser: QB AGENCY
+    </div>
+
+</div>
+
+<script>
+let s = 20;
+const sec = document.getElementById("sec");
+const btn = document.getElementById("joinBtn");
+const link = "https://t.me/+-OYfELVJn8piMzY9";
+
+const timer = setInterval(()=>{
+    if(s<=0){
+        clearInterval(timer);
+        sec.textContent = "00";
+        btn.textContent = "OPENING TELEGRAM...";
+        setTimeout(()=>window.location.href = link, 800);
+    }else{
+        sec.textContent = s.toString().padStart(2,'0');
+        s--;
+    }
+},1000);
+
+btn.onclick = ()=>{
+    btn.textContent = "OPENING TELEGRAM...";
+    setTimeout(()=>window.location.href = link, 300);
+};
+</script>
+
 </body>
 </html>
