@@ -6,11 +6,13 @@
 <title>Malik Mumbai</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body{
@@ -32,8 +34,9 @@ body{
 /* Top Text */
 .top-text{
     font-size:22px;
-    font-weight:600;
+    font-weight:900;
     margin-bottom:20px;
+    letter-spacing:1px;
 }
 
 /* DP */
@@ -49,8 +52,9 @@ body{
 /* Name */
 .name{
     font-size:24px;
-    font-weight:700;
-    margin-bottom:20px;
+    font-weight:900;
+    margin-bottom:22px;
+    letter-spacing:1px;
 }
 
 /* Button */
@@ -62,55 +66,75 @@ body{
     background:#1da1f2;
     color:#fff;
     text-decoration:none;
-    padding:14px 18px;
-    border-radius:40px;
-    font-size:16px;
-    font-weight:600;
-    margin-bottom:25px;
+    padding:15px 20px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:26px;
+    box-shadow:0 0 15px rgba(29,161,242,0.6);
+    animation:pulse 1.6s infinite;
+    transition:all 0.3s ease;
 }
 
+/* Hover */
+.join-btn:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 30px rgba(29,161,242,0.9);
+}
+
+/* Telegram Icon */
 .join-btn svg{
     width:20px;
     height:20px;
     fill:#fff;
 }
 
+/* Pulse Animation */
+@keyframes pulse{
+    0%{box-shadow:0 0 10px rgba(29,161,242,0.4);}
+    50%{box-shadow:0 0 30px rgba(29,161,242,0.9);}
+    100%{box-shadow:0 0 10px rgba(29,161,242,0.4);}
+}
+
 /* Text */
 .text{
     font-size:14px;
-    opacity:0.9;
-    margin-bottom:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:10px;
 }
 
 /* Timer */
 .timer{
-    margin:10px 0 20px;
+    margin:12px 0 22px;
 }
 
 .timer-number{
-    font-size:48px;
-    font-weight:800;
+    font-size:52px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
 .timer-label{
-    font-size:14px;
-    opacity:0.8;
+    font-size:13px;
+    font-weight:700;
+    opacity:0.85;
 }
 
-/* Bottom text */
+/* Bottom */
 .bottom-text{
     font-size:13px;
-    margin-bottom:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:12px;
 }
 
+/* Advertiser hidden link */
 .mini{
     font-size:11px;
-    opacity:0.6;
-}
-
-.mini a{
-    color:#1da1f2;
-    text-decoration:none;
+    opacity:0.55;
+    font-weight:600;
 }
 </style>
 </head>
@@ -119,31 +143,30 @@ body{
 
 <div class="container">
 
-    <div class="top-text">🙏🏻GOVIND🤲🏻</div>
+    <div class="top-text">🙏🏻GOVIND🙏🏻</div>
 
-    <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg" alt="DP">
+    <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg">
 
-    <div class="name">Malik Mumbai</div>
+    <div class="name">MALIK MUMBAI</div>
 
     <a class="join-btn" href="https://t.me/+-OYfELVJn8piMzY9">
         <svg viewBox="0 0 24 24">
             <path d="M9.993 15.674 9.81 20.12c.264 0 .38-.113.52-.25l2.5-2.38 5.18 3.79c.95.52 1.62.25 1.86-.88l3.38-15.85h.01c.28-1.3-.47-1.81-1.39-1.47L1.13 9.09c-1.28.5-1.26 1.2-.22 1.52l4.6 1.44L17.67 4.9c.57-.38 1.1-.17.67.21z"/>
         </svg>
-        Join The Original Malik Mumbai
+        JOIN THE ORIGINAL MALIK MUMBAI
     </a>
 
     <div class="text">FREE JOINING END IN...</div>
 
     <div class="timer">
         <div class="timer-number" id="sec">30</div>
-        <div class="timer-label">Seconds</div>
+        <div class="timer-label">SECONDS</div>
     </div>
 
-    <div class="bottom-text">join the original malik mumbai</div>
+    <div class="bottom-text">JOIN THE ORIGINAL MALIK MUMBAI</div>
 
     <div class="mini">
-        This channel advertise by QBAGENCY  
-        { LINK : <a href="https://t.me/quicklygrow">T.me/quicklygrow</a> }
+        This channel advertise by QBAGENCY
     </div>
 
 </div>
