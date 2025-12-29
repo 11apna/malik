@@ -21,129 +21,95 @@ src="https://www.facebook.com/tr?id=1287909793363532&ev=PageView&noscript=1"
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malik Mumbai – Official Telegram</title>
-
 <meta name="description" content="Join the official Malik Mumbai Telegram channel. Free access for limited time only.">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#000;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;overflow-x:hidden}
 
-body{
-    background:#000;
-    color:#fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
+/* KILLER GLOW EFFECTS */
+@keyframes glow{0%{text-shadow:0 0 10px #1da1f2,0 0 20px #1da1f2}50%{text-shadow:0 0 20px #ff00ff,0 0 30px #ff00ff}100%{text-shadow:0 0 10px #1da1f2,0 0 20px #1da1f2}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}10%,30%,50%,70%,90%{transform:translateX(-2px)}20%,40%,60%,80%{transform:translateX(2px)}}
+@keyframes timerBlink{0%,100%{opacity:1}50%{opacity:0.5}}
 
-.container{
-    width:100%;
-    max-width:420px;
-    text-align:center;
-}
+/* MAIN CONTAINER */
+.container{width:100%;max-width:420px;text-align:center;position:relative}
+.container::before{content:'';position:absolute;top:-50px;left:-50px;right:-50px;bottom:-50px;background:radial-gradient(circle at 50% 50%,rgba(29,161,242,0.1),transparent 70%);z-index:-1}
 
-/* Top */
-.top-text{
-    font-size:26px;
-    font-weight:700;
-    letter-spacing:1px;
-    margin-bottom:16px;
-}
+/* TOP TEXT */
+.top-text{font-size:28px;font-weight:900;margin-bottom:20px;letter-spacing:2px;color:#1da1f2;animation:glow 3s infinite;position:relative}
+.top-text::after{content:'🔥';position:absolute;right:-40px;animation:pulse 1s infinite}
 
-/* DP */
-.dp{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #1da1f2;
-    margin-bottom:12px;
-}
+/* DP CONTAINER */
+.dp-container{position:relative;width:160px;height:160px;margin:0 auto 20px}
+.dp-container::before{content:'';position:absolute;top:-5px;left:-5px;right:-5px;bottom:-5px;background:linear-gradient(45deg,#1da1f2,#ff00ff,#00ff00,#ff9900);border-radius:50%;z-index:0;animation:rotate 4s linear infinite}
+@keyframes rotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.dp{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid #000;position:relative;z-index:1;transition:all 0.3s}
+.dp:hover{transform:scale(1.05);border-color:#1da1f2}
 
-/* Name */
-.name{
-    font-size:30px;
-    font-weight:800;
-    margin-bottom:18px;
-}
+/* NAME */
+.name{font-size:42px;font-weight:900;margin-bottom:15px;background:linear-gradient(45deg,#1da1f2,#ff00ff);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:1px}
 
-/* Info */
-.info{
-    font-size:15px;
-    color:#ccc;
-    margin-bottom:8px;
-}
+/* INFO */
+.info{font-size:16px;color:#ccc;margin-bottom:10px;padding:8px 15px;background:rgba(29,161,242,0.1);border-radius:20px;display:inline-block;animation:pulse 2s infinite}
 
-/* Timer */
-.timer{
-    margin:14px 0 20px;
-}
+/* TIMER */
+.timer{margin:25px 0 30px;padding:15px;background:rgba(255,0,0,0.15);border-radius:15px;border:2px solid rgba(255,0,0,0.3);animation:shake 0.5s ease-in-out infinite}
+.timer-number{font-size:68px;font-weight:900;color:#ff0000;text-shadow:0 0 15px rgba(255,0,0,0.7);animation:timerBlink 1s infinite}
+.timer-label{font-size:14px;color:#ff9999;letter-spacing:2px;font-weight:600;margin-top:5px}
 
-.timer-number{
-    font-size:58px;
-    font-weight:900;
-}
-
-.timer-label{
-    font-size:13px;
-    color:#aaa;
-    letter-spacing:1px;
-}
-
-/* Button */
-.join-btn{
-    width:100%;
-    background:#1da1f2;
-    color:#fff;
-    border:none;
-    padding:16px;
-    font-size:17px;
-    font-weight:800;
-    border-radius:40px;
-    cursor:pointer;
-    transition:all .25s ease;
-    box-shadow:0 0 0 rgba(29,161,242,0.6);
-}
-
-.join-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px rgba(29,161,242,0.8);
-}
-
-.join-btn:active{
-    transform:scale(.98);
-}
+/* BUTTON */
+.join-btn{width:100%;background:linear-gradient(45deg,#1da1f2,#0066ff);color:#fff;border:none;padding:20px;font-size:18px;font-weight:900;border-radius:50px;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;box-shadow:0 0 20px rgba(29,161,242,0.5);letter-spacing:1px}
+.join-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:0.5s}
+.join-btn:hover{transform:translateY(-5px);box-shadow:0 0 30px rgba(29,161,242,0.8)}
+.join-btn:hover::before{left:100%}
+.join-btn:active{transform:translateY(-2px)}
 
 /* CTA */
-.cta{
-    margin-top:14px;
-    font-size:14px;
-    color:#bbb;
+.cta{margin-top:20px;font-size:15px;color:#bbb;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;border:1px solid rgba(255,255,255,0.1)}
+
+/* ADVERTISER */
+.advertiser{margin-top:30px;font-size:12px;color:#666;letter-spacing:1px}
+.advertiser a{color:#1da1f2;text-decoration:none;font-weight:600;transition:all 0.3s}
+.advertiser a:hover{color:#ff00ff;text-shadow:0 0 10px rgba(255,0,255,0.5)}
+
+/* VIP BADGE */
+.vip-badge{position:fixed;top:20px;right:20px;background:linear-gradient(45deg,#ffd700,#ff9900);color:#000;padding:8px 15px;border-radius:20px;font-weight:900;font-size:12px;animation:pulse 2s infinite;z-index:1000;box-shadow:0 0 15px rgba(255,215,0,0.5)}
+
+/* COUNTDOWN WARNING */
+.warning{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,0,0,0.2);color:#ff9999;padding:10px 20px;border-radius:15px;font-size:12px;font-weight:600;border:1px solid rgba(255,0,0,0.3);animation:pulse 1s infinite;display:none}
+
+/* RESPONSIVE */
+@media (max-width:480px){
+    .container{padding:10px}
+    .name{font-size:36px}
+    .timer-number{font-size:56px}
+    .join-btn{padding:18px;font-size:16px}
+    .dp-container{width:140px;height:140px}
+    .dp{width:130px;height:130px}
 }
 
-/* Advertiser */
-.advertiser{
-    margin-top:22px;
-    font-size:11px;
-    color:#666;
-    letter-spacing:.5px;
+@media (max-width:360px){
+    .name{font-size:30px}
+    .timer-number{font-size:48px}
+    .top-text{font-size:24px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="vip-badge">⚡ VIP ACCESS</div>
 
+<div class="container">
     <div class="top-text">🙏🏻 GOVIND 🙏🏻</div>
 
-    <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg" alt="Malik Mumbai">
+    <div class="dp-container">
+        <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69513efa00aab_nFw6sttsu884EipYH3db4oyTFuAyC856M0uR2EZluWLaFYSYiDYZSE9C-yvf-Zu30R35VlAIiIw0poeD4OlOLZFKFACUiftKFq3CHXrNFnxRmOEWQsQrOWC8P1Fu4x2XnuR-NPyr8OnbZKHt-xAfW_i0GBIfiG-GF_agysmpPWQ5WCRLWQ_1hV73mw_z2IVF11cZ9XN2IaAsEB.jpg" alt="Malik Mumbai" loading="lazy">
+    </div>
 
     <div class="name">Malik Mumbai</div>
 
@@ -155,40 +121,72 @@ body{
     </div>
 
     <button class="join-btn" id="joinBtn">
-        JOIN OFFICIAL TELEGRAM (FREE)
+        🔥 JOIN OFFICIAL TELEGRAM (FREE) 🔥
     </button>
 
-    <div class="cta">Join the original Malik Mumbai channel</div>
+    <div class="cta">⚡ Join the original Malik Mumbai channel - LIMITED SPOTS</div>
 
     <div class="advertiser">
-        Advertiser: QB AGENCY
+        Advertiser: <a href="https://t.me/quicklygrow" target="_blank">t.me/quicklygrow</a>
     </div>
-
 </div>
 
+<div class="warning" id="warning">⏰ HURRY! TIMER ENDING!</div>
+
 <script>
+// Ultra Fast Timer
 let s = 20;
 const sec = document.getElementById("sec");
 const btn = document.getElementById("joinBtn");
+const warning = document.getElementById("warning");
 const link = "https://t.me/+-OYfELVJn8piMzY9";
 
-const timer = setInterval(()=>{
-    if(s<=0){
+// Killer Timer Function
+const timer = setInterval(() => {
+    if(s <= 10 && s > 5) {
+        sec.style.color = "#ff9900";
+        sec.style.textShadow = "0 0 20px rgba(255, 153, 0, 0.8)";
+    } else if(s <= 5) {
+        sec.style.color = "#ff0000";
+        sec.style.textShadow = "0 0 25px rgba(255, 0, 0, 0.9)";
+        warning.style.display = "block";
+    }
+    
+    if(s <= 0) {
         clearInterval(timer);
         sec.textContent = "00";
-        btn.textContent = "OPENING TELEGRAM...";
-        setTimeout(()=>window.location.href = link, 800);
-    }else{
-        sec.textContent = s.toString().padStart(2,'0');
+        btn.textContent = "⚡ REDIRECTING... ⚡";
+        btn.style.background = "linear-gradient(45deg, #ff0000, #ff3300)";
+        setTimeout(() => window.location.href = link, 800);
+    } else {
+        sec.textContent = s.toString().padStart(2, '0');
         s--;
     }
-},1000);
+}, 1000);
 
-btn.onclick = ()=>{
-    btn.textContent = "OPENING TELEGRAM...";
-    setTimeout(()=>window.location.href = link, 300);
+// Killer Button Click
+btn.onclick = () => {
+    btn.textContent = "⚡ REDIRECTING... ⚡";
+    btn.style.background = "linear-gradient(45deg, #00ff00, #00cc00)";
+    setTimeout(() => window.location.href = link, 300);
 };
-</script>
 
+// Add Hover Sound Effect (Optional - Comment out if not needed)
+btn.addEventListener('mouseenter', () => {
+    // Play subtle hover effect
+    try {
+        const audio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEAQB8AAEAfAAABAAgAZGF0YQ');
+        audio.volume = 0.1;
+        audio.play();
+    } catch(e) {}
+});
+
+// Auto-redirect after 25 seconds as backup
+setTimeout(() => {
+    if(window.location.href.indexOf(link) === -1) {
+        window.location.href = link;
+    }
+}, 25000);
+</script>
 </body>
 </html>
